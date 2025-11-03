@@ -3,449 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weinankauf - Faire Preise für Ihre Weine</title>
+    <title>WeinAnkauf - Weinankauf einfach und fair</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
+    <!-- Шапка -->
+    <header>
         <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <i class="fas fa-wine-bottle logo-icon"></i>
-                    WeinAnkauf
-                </a>
+            <div class="header-content">
+                <div class="logo"><i class="fas fa-wine-glass-alt"></i>WeinAnkauf</div>
                 
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">Startseite</a></li>
-                    <li><a href="#how-it-works" class="nav-link">So funktioniert's</a></li>
-                    <li><a href="#wines" class="nav-link">Unsere Weine</a></li>
-                    <li><a href="#benefits" class="nav-link">Vorteile</a></li>
-                    <li><a href="#testimonials" class="nav-link">Erfahrungen</a></li>
-                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
-                </ul>
+                <!-- Навигация для десктопа -->
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#how-it-works">So funktioniert's</a></li>
+                        <li><a href="#wines">Interessante Weine</a></li>
+                        <li><a href="#advantages">Ihre Vorteile</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
                 
-                <div class="nav-actions">
-                    <a href="https://wa.me/4915563355537" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <div class="mobile-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+                <!-- Бургер-меню -->
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
+            </div>
         </div>
+        
+        <!-- Мобильная навигация -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#how-it-works">So funktioniert's</a></li>
+                <li><a href="#wines">Interessante Weine</a></li>
+                <li><a href="#advantages">Ihre Vorteile</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Оверлей для мобильного меню -->
+        <div class="overlay"></div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Герой-секция -->
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Ihre Weine. Faire Preise.</h1>
-                <p class="hero-subtitle">Wir kaufen hochwertige Weine, Champagner und Spirituosen aus aller Welt – einfach, fair und transparent.</p>
-                <div class="hero-actions">
-                    <a href="#how-it-works" class="btn btn-accent">
-                        <i class="fas fa-play-circle"></i> So funktioniert's
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Jetzt Angebot einholen
-                    </a>
-                </div>
-            </div>
-        </div>
-        <a href="#how-it-works" class="hero-scroll">
-            <i class="fas fa-chevron-down fa-2x"></i>
-        </a>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="section" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">So einfach funktioniert's</h2>
-                <p class="section-subtitle">Drei einfache Schritte zu Ihrem fairen Wein-Angebot</p>
-            </div>
-            
-            <div class="steps">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <i class="fas fa-list"></i>
-                    </div>
-                    <h3 class="step-title">Weinliste übermitteln</h3>
-                    <p>Übermitteln Sie uns Ihre Weinliste (Name, Jahrgang, Flaschengrösse und Anzahl). Senden Sie uns aussagekräftige Fotos per WhatsApp.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3 class="step-title">Kostenfreies Angebot</h3>
-                    <p>Sie erhalten innerhalb von 24 Stunden ein kostenfreies und unverbindliches Angebot mit den besten Preisen.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="step-title">Persönliche Abwicklung</h3>
-                    <p>Bei Interesse besuchen wir Sie persönlich, prüfen die Weine vor Ort und übernehmen die gesamte Abwicklung – fair, diskret und ohne versteckte Gebühren.</p>
-                </div>
-            </div>
+            <h1 class="fade-in">Weinankauf einfach, fair und transparent</h1>
+            <p class="fade-in">Wir kaufen hochwertige Weine, Champagner und Spirituosen aus aller Welt – mit Fachwissen, Leidenschaft und fairen Preisen.</p>
+            <a href="#contact" class="btn fade-in">Kostenloses Angebot anfordern</a>
         </div>
     </section>
 
-    <!-- Wines Section -->
-    <section class="section" id="wines" style="background-color: #f9f9f9;">
+    <!-- Раздел 1: Как это работает -->
+    <section id="how-it-works">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Welche Weine sind besonders interessant?</h2>
-                <p class="section-subtitle">Wir kaufen, was Kenner lieben – fair, diskret und ohne Aufwand für Sie.</p>
-            </div>
-            
-            <div class="wine-categories">
-                <div class="wine-card">
-                    <div class="wine-image">
-                        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bordeaux Weine">
-                    </div>
-                    <div class="wine-content">
-                        <h3 class="wine-title">
-                            <i class="fas fa-wine-glass-alt"></i> Bordeaux – unsere Leidenschaft
-                        </h3>
-                        <ul class="wine-list">
-                            <li>Lafite Rothschild</li>
-                            <li>Mouton Rothschild</li>
-                            <li>Margaux</li>
-                            <li>Latour</li>
-                            <li>Haut Brion</li>
-                            <li>Pontet Canet</li>
-                        </ul>
-                    </div>
+            <h2 class="section-title">So einfach funktioniert's</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <h3>4 einfache Schritte zu Ihrem Verkaufserfolg</h3>
+                    <ol>
+                        <li><strong>Übermitteln Sie uns Ihre Weinliste</strong> (Name des Weines, Jahrgang, Flaschengrösse und Anzahl Flaschen)</li>
+                        <li><strong>Senden Sie uns aussagekräftige Fotos</strong> per WhatsApp: +491556 33 555 37</li>
+                        <li><strong>Sie erhalten innerhalb 24 Stunden</strong> ein kostenfreies und unverbindliches Angebot mit den besten Preisen.</li>
+                        <li><strong>Bei Interesse besuchen wir Sie persönlich</strong> – unkompliziert, offen und vertrauensvoll.</li>
+                    </ol>
+                    
+                    <h3>Für kleinere Mengen</h3>
+                    <p>Wir stellen Ihnen geprüfte, bruchsichere Versandkartons zur Verfügung, damit der Versand schnell, sicher und problemlos abläuft.</p>
+                    
+                    <h3>Bezahlung und Abwicklung</h3>
+                    <p>Die Bezahlung erfolgt sofort – wahlweise in bar oder per Überweisung, ganz nach Ihrem Wunsch. Wir übernehmen die gesamte Abwicklung – fair, diskret und ohne versteckte Gebühren.</p>
                 </div>
-                
-                <div class="wine-card">
-                    <div class="wine-image">
-                        <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pomerol & Saint-Émilion">
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weinliste">
                     </div>
-                    <div class="wine-content">
-                        <h3 class="wine-title">
-                            <i class="fas fa-wine-bottle"></i> Pomerol & Saint-Émilion
-                        </h3>
-                        <ul class="wine-list">
-                            <li>Petrus</li>
-                            <li>Le Pin</li>
-                            <li>L'Evangile</li>
-                            <li>Vieux Château Certan</li>
-                            <li>Cheval Blanc</li>
-                            <li>Ausone</li>
-                        </ul>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weinfotos">
                     </div>
-                </div>
-                
-                <div class="wine-card">
-                    <div class="wine-image">
-                        <img src="img/01.jpg" alt="Burgund & Champagne">
+                    <div class="grid-item">
+                        <img src="img/01.jpg" alt="Angebot">
                     </div>
-                    <div class="wine-content">
-                        <h3 class="wine-title">
-                            <i class="fas fa-glass-cheers"></i> Burgund & Champagne
-                        </h3>
-                        <ul class="wine-list">
-                            <li>Domaine de la Romanée-Conti</li>
-                            <li>Dom Pérignon</li>
-                            <li>Krug</li>
-                            <li>Cristal</li>
-                            <li>Bollinger</li>
-                            <li>Veuve Clicquot</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="wine-card">
-                    <div class="wine-image">
-                        <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Italien & weitere Länder">
-                    </div>
-                    <div class="wine-content">
-                        <h3 class="wine-title">
-                            <i class="fas fa-globe-europe"></i> Italien & weitere Länder
-                        </h3>
-                        <ul class="wine-list">
-                            <li>Masseto</li>
-                            <li>Sassicaia</li>
-                            <li>Solaia</li>
-                            <li>Tignanello</li>
-                            <li>Vega Sicilia</li>
-                            <li>Penfolds Grange</li>
-                        </ul>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Persönlicher Besuch">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="section benefits" id="benefits">
+    <!-- Раздел 2: Интересные вина -->
+    <section id="wines" style="background-color: #f5f5f5;">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Ihre Vorteile auf einen Blick</h2>
-                <p class="section-subtitle">Warum Sie mit uns zusammenarbeiten sollten</p>
-            </div>
-            
-            <div class="benefit-cards">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-user-tie"></i>
+            <h2 class="section-title">Welche Weine sind besonders interessant?</h2>
+            <div class="content-grid">
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bordeaux Weine">
                     </div>
-                    <h3 class="benefit-title">Persönlich & individuell</h3>
-                    <p>Kostenlose Beratung, Bewertung und Abwicklung nach Ihren Wünschen.</p>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Pomerol Weine">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Burgunder Weine">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/01.jpg" alt="Italienische Weine">
+                    </div>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="benefit-title">Fachwissen & Erfahrung</h3>
-                    <p>Marktgerechte Spitzenpreise dank internationalem Netzwerk und jahrelanger Expertise.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3 class="benefit-title">Alles aus einer Hand</h3>
-                    <p>Bewertung, Prüfung und Transport für schnelle, unkomplizierte Abwicklung.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="benefit-title">Vertrauen & Diskretion</h3>
-                    <p>Seriös, zuverlässig und mit tausenden zufriedenen Kunden.</p>
+                <div class="text-content">
+                    <h3>Bordeaux – unsere Leidenschaft</h3>
+                    <p>Besonders gefragt sind die großen Namen wie Lafite Rothschild, Mouton Rothschild, Margaux, Latour und Haut Brion. Auch Klassiker wie Pontet Canet, Palmer, Léoville Las Cases, Pichon Baron, Montrose, Calon Ségur und viele weitere erwerben wir regelmäßig.</p>
+                    
+                    <h3>Pomerol & Saint-Émilion</h3>
+                    <p>Wir suchen edle Tropfen wie Petrus, Le Pin, L'Evangile, Vieux Château Certan, Cheval Blanc, Ausone, Angélus, Pavie – ebenso Süßweine wie Château d'Yquem aus Sauternes.</p>
+                    
+                    <h3>Burgund & Champagne</h3>
+                    <p>Ausgewählte Burgunderweine – allen voran Domaine de la Romanée-Conti – sind bei uns besonders gefragt. Auch Dom Pérignon, Krug und weitere Top-Champagnerhäuser kaufen wir gerne an.</p>
+                    
+                    <h3>Italien & weitere Länder</h3>
+                    <p>Wir schätzen die legendären „Supertuscans“ wie Masseto, Sassicaia, Solaia, Tignanello. Ebenso interessieren uns Spitzenweine aus Spanien, Australien, Deutschland und den USA.</p>
+                    
+                    <p><strong>Kurz gesagt:</strong> Wir kaufen, was Kenner lieben – fair, diskret und ohne Aufwand für Sie.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="section">
+    <!-- Раздел 3: Преимущества -->
+    <section id="advantages">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Unsere Weinauswahl</h2>
-                <p class="section-subtitle">Eine Auswahl der Weine, die wir regelmäßig ankaufen</p>
+            <h2 class="section-title">Ihre Vorteile auf einen Blick</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <ul class="benefits-list">
+                        <li><strong>Persönlich & individuell</strong> – kostenlose Beratung, Bewertung und Abwicklung.</li>
+                        <li><strong>Fachwissen & Erfahrung</strong> – marktgerechte Spitzenpreise dank internationalem Kundennetzwerk und jahrelanger Expertise.</li>
+                        <li><strong>Alles aus einer Hand</strong> – Bewertung, Prüfung und Transport sorgen für schnelle, unkomplizierte Abwicklung.</li>
+                        <li><strong>Vertrauen & Diskretion</strong> – seriös, zuverlässig und mit tausenden zufriedenen Kunden.</li>
+                    </ul>
+                    
+                    <p><strong>Kurz gesagt:</strong> Wir machen Weinankauf einfach, fair und stressfrei für Sie!</p>
+                    
+                    <a href="#contact" class="btn" style="margin-top: 2rem;">Jetzt Angebot einholen</a>
+                </div>
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Persönliche Beratung">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fachwissen">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/01.jpg" alt="Alles aus einer Hand">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vertrauen und Diskretion">
+                    </div>
+                </div>
             </div>
-            
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Unsere Weinwelt</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bordeaux Weine">
-                    <div class="gallery-overlay">
-                        <h4>Bordeaux Weine</h4>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wein 1">
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Weinprobe">
-                    <div class="gallery-overlay">
-                        <h4>Weinprobe</h4>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wein 2">
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="img/01.jpg" alt="Champagner">
-                    <div class="gallery-overlay">
-                        <h4>Champagner</h4>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wein 3">
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Weinkeller">
-                    <div class="gallery-overlay">
-                        <h4>Weinkeller</h4>
-                    </div>
+                    <img src="img/01.jpg" alt="Wein 4">
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Weinetiketten">
-                    <div class="gallery-overlay">
-                        <h4>Weinetiketten</h4>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wein 5">
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="img/02.jpg" alt="Weingläser">
-                    <div class="gallery-overlay">
-                        <h4>Weingläser</h4>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wein 6">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials" style="background-color: #f9f9f9;">
+    <!-- Контакты -->
+    <section id="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Was unsere Kunden sagen</h2>
-                <p class="section-subtitle">Erfahrungen unserer zufriedenen Kunden</p>
-            </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Der Verkauf meiner Weinsammlung war völlig unkompliziert. Innerhalb von 24 Stunden hatte ich ein faires Angebot und die Abwicklung war professionell und diskret. Sehr empfehlenswert!</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Klaus M.">
-                        </div>
-                        <div class="author-info">
-                            <h4>Klaus M.</h4>
-                            <p>Weinsammler aus München</p>
-                        </div>
+            <h2 class="section-title">Kontaktieren Sie uns</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <h3>So erreichen Sie uns</h3>
+                    <p>Haben Sie Fragen oder möchten Sie ein unverbindliches Angebot? Wir sind für Sie da!</p>
+                    
+                    <div class="contact-info">
+                        <p><i class="fab fa-whatsapp"></i><strong>WhatsApp:</strong> +491556 33 555 37</p>
+                        <p><i class="fas fa-envelope"></i><strong>E-Mail:</strong> info@weinankauf.de</p>
+                        <p><i class="fas fa-clock"></i><strong>Öffnungszeiten:</strong> Mo-Fr: 9:00-18:00 Uhr</p>
+                    </div>
+                    
+                    <h3>So funktioniert's im Überblick:</h3>
+                    <ol>
+                        <li>Weinliste und Fotos senden</li>
+                        <li>Kostenloses Angebot erhalten</li>
+                        <li>Persönliche Besichtigung vereinbaren</li>
+                        <li>Sofortige Bezahlung</li>
+                    </ol>
+                    
+                    <a href="#" class="btn">Jetzt Kontakt aufnehmen</a>
+                </div>
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kontakt 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kontakt 2">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/01.jpg" alt="Kontakt 3">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kontakt 4">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Kontaktieren Sie uns</h2>
-                <p class="section-subtitle">Wir freuen uns auf Ihre Nachricht</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Telefon</h3>
-                            <p>+49 1556 33 555 37</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>WhatsApp</h3>
-                            <p>+49 1556 33 555 37</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>E-Mail</h3>
-                            <p>info@weinankauf.de</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Öffnungszeiten</h3>
-                            <p>Montag - Freitag: 9:00 - 18:00 Uhr</p>
-                            <p>Samstag: 10:00 - 14:00 Uhr</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Ihr Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Ihre E-Mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Ihre Telefonnummer</label>
-                            <input type="tel" id="phone" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Ihre Nachricht</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-paper-plane"></i> Nachricht senden
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Подвал -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
+                <div class="footer-section">
                     <h3>WeinAnkauf</h3>
-                    <p>Wir kaufen hochwertige Weine, Champagner und Spirituosen aus aller Welt – einfach, fair und transparent.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
+                    <p>Ihr Partner für fairen und transparenten Weinankauf. Seit Jahren vertrauen uns tausende zufriedene Kunden.</p>
                 </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Startseite</a></li>
-                        <li><a href="#how-it-works">So funktioniert's</a></li>
-                        <li><a href="#wines">Unsere Weine</a></li>
-                        <li><a href="#benefits">Vorteile</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Unsere Weine</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Bordeaux</a></li>
-                        <li><a href="#">Pomerol & Saint-Émilion</a></li>
-                        <li><a href="#">Burgund & Champagne</a></li>
-                        <li><a href="#">Italien & weitere Länder</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
+                <div class="footer-section">
                     <h3>Kontakt</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-phone-alt"></i> +49 1556 33 555 37</li>
-                        <li><i class="fab fa-whatsapp"></i> +49 1556 33 555 37</li>
-                        <li><i class="fas fa-envelope"></i> info@weinankauf.de</li>
-                    </ul>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +491556 33 555 37</p>
+                    <p><i class="fas fa-envelope"></i> E-Mail: info@weinankauf.de</p>
+                    <p><i class="fas fa-clock"></i> Öffnungszeiten: Mo-Fr 9:00-18:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <p><a href="#how-it-works">So funktioniert's</a></p>
+                    <p><a href="#wines">Interessante Weine</a></p>
+                    <p><a href="#advantages">Ihre Vorteile</a></p>
+                    <p><a href="#gallery">Galerie</a></p>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 WeinAnkauf. Alle Rechte vorbehalten.</p>
             </div>

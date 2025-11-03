@@ -1,42 +1,32 @@
-// Mobile Menu Toggle
-const mobileToggle = document.querySelector('.mobile-toggle');
-const navMenu = document.querySelector('.nav-menu');
+// Бургер-меню
+const burgerMenu = document.querySelector('.burger-menu');
+const mobileNav = document.querySelector('.mobile-nav');
+const overlay = document.querySelector('.overlay');
 
-mobileToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    mobileToggle.querySelector('i').classList.toggle('fa-bars');
-    mobileToggle.querySelector('i').classList.toggle('fa-times');
+burgerMenu.addEventListener('click', function() {
+    this.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileToggle.querySelector('i').classList.add('fa-bars');
-        mobileToggle.querySelector('i').classList.remove('fa-times');
-    });
+// Закрытие меню при клике на оверлей или ссылку
+overlay.addEventListener('click', closeMenu);
+
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
 
-// Header scroll effect
-window.addEventListener('scroll', () => {
-    const header = document.getElementById('header');
-    if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+function closeMenu() {
+    burgerMenu.classList.remove('active');
+    mobileNav.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
 
-// Form submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.');
-    this.reset();
-});
-
-// Smooth scrolling for anchor links
+// Плавная прокрутка к якорям
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
@@ -45,59 +35,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 100,
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// Animation on scroll
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.step-card, .wine-card, .benefit-card, .gallery-item');
-    
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < window.innerHeight - elementVisible) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
+// Анимация появления элементов при скролле
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
-// Initialize animation styles
-window.addEventListener('load', () => {
-    const elements = document.querySelectorAll('.step-card, .wine-card, .benefit-card, .gallery-item');
-    
-    elements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        }
     });
-    
-    // Trigger initial animation
-    setTimeout(() => {
-        animateOnScroll();
-    }, 100);
+}, observerOptions);
+
+// Применяем анимацию к элементам
+document.querySelectorAll('.content-grid, .gallery-grid, .section-title, .benefits-list').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
 });
 
-// Listen for scroll events
-window.addEventListener('scroll', animateOnScroll);
-
-const headerButton = document.querySelector(".nav-actions .btn");
-const headerNav = document.querySelector(".nav-menu");
-const navActions = document.querySelector(".nav-actions");
-
-function moveHeaderButton() {
-    const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-    if (viewport_width <= 1250) {
-        headerNav.insertBefore(headerButton, headerNav.children[headerNav.children.length]);
-    } else {
-        navActions.insertBefore(headerButton, navActions.children[1]);
-    }
-}
-moveHeaderButton();
-window.addEventListener("resize", moveHeaderButton);
+// Анимация для элементов героя
+document.querySelectorAll('.hero h1, .hero p, .hero .btn').forEach(el => {
+    el.classList.add('fade-in');
+});
