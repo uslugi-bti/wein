@@ -1,272 +1,164 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeinAnkauf - Weinankauf einfach und fair</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Wein Ankauf von Privat</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Шапка -->
+
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo"><i class="fas fa-wine-glass-alt"></i>WeinAnkauf</div>
-                
-                <!-- Навигация для десктопа -->
-                <nav class="desktop-nav">
-                    <ul>
-                        <li><a href="#how-it-works">So funktioniert's</a></li>
-                        <li><a href="#wines">Interessante Weine</a></li>
-                        <li><a href="#advantages">Ihre Vorteile</a></li>
-                        <li><a href="#gallery">Galerie</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                    </ul>
-                </nav>
-                
-                <!-- Бургер-меню -->
-                <div class="burger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <div class="header-container">
+            <div class="logo-container">
+                <h1>WEIN ANKAUF VON PRIVAT</h1>
             </div>
+            <nav>
+                <a href="#so-einfach">SO EINFACH FUNKTIONIERT'S</a>
+                <a href="#welche-weine">WELCHE WEINE</a>
+                <a href="#vorteile">IHRE VORTEILE</a>
+                <a href="#kontakt">KONTAKT</a>
+            </nav>
         </div>
-        
-        <!-- Мобильная навигация -->
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="#how-it-works">So funktioniert's</a></li>
-                <li><a href="#wines">Interessante Weine</a></li>
-                <li><a href="#advantages">Ihre Vorteile</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Оверлей для мобильного меню -->
-        <div class="overlay"></div>
     </header>
 
-    <!-- Герой-секция -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="fade-in">Weinankauf einfach, fair und transparent</h1>
-            <p class="fade-in">Wir kaufen hochwertige Weine, Champagner und Spirituosen aus aller Welt – mit Fachwissen, Leidenschaft und fairen Preisen.</p>
-            <a href="#contact" class="btn fade-in">Kostenloses Angebot anfordern</a>
+    <section class="hero-bg">
+        <div class="hero-content">
+            <h2>Exklusive Weine gesucht</h2>
+            <p>Fair • Diskret • Professionell</p>
+            <a href="#kontakt" class="cta-button">Jetzt unverbindlich anfragen</a>
         </div>
     </section>
 
-    <!-- Раздел 1: Как это работает -->
-    <section id="how-it-works">
-        <div class="container">
-            <h2 class="section-title">So einfach funktioniert's</h2>
-            <div class="content-grid">
-                <div class="text-content">
-                    <h3>4 einfache Schritte zu Ihrem Verkaufserfolg</h3>
-                    <ol>
-                        <li><strong>Übermitteln Sie uns Ihre Weinliste</strong> (Name des Weines, Jahrgang, Flaschengrösse und Anzahl Flaschen)</li>
-                        <li><strong>Senden Sie uns aussagekräftige Fotos</strong> per WhatsApp: +491556 33 555 37</li>
-                        <li><strong>Sie erhalten innerhalb 24 Stunden</strong> ein kostenfreies und unverbindliches Angebot mit den besten Preisen.</li>
-                        <li><strong>Bei Interesse besuchen wir Sie persönlich</strong> – unkompliziert, offen und vertrauensvoll.</li>
-                    </ol>
-                    
-                    <h3>Für kleinere Mengen</h3>
-                    <p>Wir stellen Ihnen geprüfte, bruchsichere Versandkartons zur Verfügung, damit der Versand schnell, sicher und problemlos abläuft.</p>
-                    
-                    <h3>Bezahlung und Abwicklung</h3>
-                    <p>Die Bezahlung erfolgt sofort – wahlweise in bar oder per Überweisung, ganz nach Ihrem Wunsch. Wir übernehmen die gesamte Abwicklung – fair, diskret und ohne versteckte Gebühren.</p>
-                </div>
-                <div class="image-grid">
-                    <div class="grid-item">
-                        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weinliste">
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weinfotos">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/01.jpg" alt="Angebot">
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Persönlicher Besuch">
-                    </div>
-                </div>
+    <!-- Раздел 1: So einfach funktioniert's -->
+    <section class="section" id="so-einfach">
+        <div class="content">
+            <h2>So einfach funktioniert's</h2>
+            
+            <h3><span class="step-number">1</span>Übermitteln Sie uns Ihre Weinliste</h3>
+            <p>Name des Weines, Jahrgang, Flaschengrösse und Anzahl Flaschen</p>
+            
+            <h3><span class="step-number">2</span>Senden Sie uns Fotos per WhatsApp</h3>
+            <p>WhatsApp: <span class="highlight">+491556 33 555 37</span></p>
+            
+            <h3><span class="step-number">3</span>Kostenfreies und unverbindliches Angebot</h3>
+            <p>Sie bekommen innerhalb 24 Stunden ein kostenfreies und unverbindliches Angebot mit den besten Preisen.</p>
+            
+            <h3><span class="step-number">4</span>Persönlicher Besuch</h3>
+            <p>Wenn Ihnen unser Angebot zusagt, besuche ich Sie gerne persönlich und sehe mir Ihre Weine direkt vor Ort an – unkompliziert, offen und vertrauensvoll.</p>
+            
+            <div class="wine-region">
+                <h4>Versand & Bezahlung</h4>
+                <p>Für kleinere Mengen stellen wir Ihnen geprüfte, bruchsichere Versandkartons zur Verfügung, damit der Versand schnell, sicher und problemlos abläuft.</p>
+                <p>Die Bezahlung erfolgt sofort – wahlweise in bar oder per Überweisung, ganz nach Ihrem Wunsch.</p>
+                <p>Wir übernehmen die gesamte Abwicklung – fair, diskret und ohne versteckte Gebühren.</p>
             </div>
         </div>
+        <div class="section-image" style="background-image: url('img/02.jpg')"></div>
     </section>
 
-    <!-- Раздел 2: Интересные вина -->
-    <section id="wines" style="background-color: #f5f5f5;">
-        <div class="container">
-            <h2 class="section-title">Welche Weine sind besonders interessant?</h2>
-            <div class="content-grid">
-                <div class="image-grid">
-                    <div class="grid-item">
-                        <img src="img/02.jpg" alt="Bordeaux Weine">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/03.jpg" alt="Pomerol Weine">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/04.jpg" alt="Burgunder Weine">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/05.jpg" alt="Italienische Weine">
-                    </div>
+    <!-- Раздел 2: Welche Weine sind besonders interessant -->
+    <section class="section" id="welche-weine">
+        <div class="content">
+            <h2>Welche Weine sind besonders interessant?</h2>
+            <p>Wir kaufen hochwertige Weine, Champagner und Spirituosen aus aller Welt – einfach, fair und transparent.</p>
+            <p>Unser Schwerpunkt liegt auf den renommiertesten Regionen und Produzenten.</p>
+            
+            <div class="wine-region">
+                <h4>Bordeaux – unsere Leidenschaft</h4>
+                <p>Besonders gefragt sind die großen Namen wie <span class="highlight">Lafite Rothschild, Mouton Rothschild, Margaux, Latour und Haut Brion</span>.</p>
+                <p>Auch Klassiker wie <span class="highlight">Pontet Canet, Palmer, Léoville Las Cases, Pichon Baron, Montrose, Calon Ségur</span> und viele weitere erwerben wir regelmäßig.</p>
+            </div>
+            
+            <div class="wine-region">
+                <h4>Pomerol & Saint-Émilion</h4>
+                <p>Wir suchen edle Tropfen wie <span class="highlight">Petrus, Le Pin, L'Evangile, Vieux Château Certan, Cheval Blanc, Ausone, Angélus, Pavie</span> – ebenso Süßweine wie <span class="highlight">Château d'Yquem</span> aus Sauternes.</p>
+            </div>
+            
+            <div class="wine-region">
+                <h4>Burgund & Champagne</h4>
+                <p>Ausgewählte Burgunderweine – allen voran <span class="highlight">Domaine de la Romanée-Conti</span> – sind bei uns besonders gefragt.</p>
+                <p>Auch <span class="highlight">Dom Pérignon, Krug</span> und weitere Top-Champagnerhäuser kaufen wir gerne an.</p>
+            </div>
+            
+            <div class="wine-region">
+                <h4>Italien & weitere Länder</h4>
+                <p>Wir schätzen die legendären „Supertuscans" wie <span class="highlight">Masseto, Sassicaia, Solaia, Tignanello</span>.</p>
+                <p>Ebenso interessieren uns Spitzenweine aus Spanien, Australien, Deutschland und den USA.</p>
+            </div>
+            
+            <p class="highlight" style="font-size: 1.2rem; margin-top: 20px;">Kurz gesagt: Wir kaufen, was Kenner lieben – fair, diskret und ohne Aufwand für Sie.</p>
+        </div>
+        <div class="section-image" style="background-image: url('img/03.jpg')"></div>
+    </section>
+
+    <!-- Раздел 3: Ihre Vorteile -->
+    <section class="section" id="vorteile">
+        <div class="content">
+            <h2>Ihre Vorteile auf einen Blick</h2>
+            
+            <div class="advantages">
+                <div class="advantage-item">
+                    <h4>Persönlich & individuell</h4>
+                    <p>Kostenlose Beratung, Bewertung und Abwicklung.</p>
                 </div>
-                <div class="text-content">
-                    <h3>Bordeaux – unsere Leidenschaft</h3>
-                    <p>Besonders gefragt sind die großen Namen wie Lafite Rothschild, Mouton Rothschild, Margaux, Latour und Haut Brion. Auch Klassiker wie Pontet Canet, Palmer, Léoville Las Cases, Pichon Baron, Montrose, Calon Ségur und viele weitere erwerben wir regelmäßig.</p>
-                    
-                    <h3>Pomerol & Saint-Émilion</h3>
-                    <p>Wir suchen edle Tropfen wie Petrus, Le Pin, L'Evangile, Vieux Château Certan, Cheval Blanc, Ausone, Angélus, Pavie – ebenso Süßweine wie Château d'Yquem aus Sauternes.</p>
-                    
-                    <h3>Burgund & Champagne</h3>
-                    <p>Ausgewählte Burgunderweine – allen voran Domaine de la Romanée-Conti – sind bei uns besonders gefragt. Auch Dom Pérignon, Krug und weitere Top-Champagnerhäuser kaufen wir gerne an.</p>
-                    
-                    <h3>Italien & weitere Länder</h3>
-                    <p>Wir schätzen die legendären „Supertuscans“ wie Masseto, Sassicaia, Solaia, Tignanello. Ebenso interessieren uns Spitzenweine aus Spanien, Australien, Deutschland und den USA.</p>
-                    
-                    <p><strong>Kurz gesagt:</strong> Wir kaufen, was Kenner lieben – fair, diskret und ohne Aufwand für Sie.</p>
+                
+                <div class="advantage-item">
+                    <h4>Fachwissen & Erfahrung</h4>
+                    <p>Marktgerechte Spitzenpreise dank internationalem Kundennetzwerk und jahrelanger Expertise.</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <h4>Alles aus einer Hand</h4>
+                    <p>Bewertung, Prüfung und Transport sorgen für schnelle, unkomplizierte Abwicklung.</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <h4>Vertrauen & Diskretion</h4>
+                    <p>Seriös, zuverlässig und mit tausenden zufriedenen Kunden.</p>
                 </div>
             </div>
+            
+            <p class="highlight" style="font-size: 1.3rem; margin-top: 30px; text-align: center;">
+                Kurz gesagt: Wir machen Weinankauf einfach, fair und stressfrei für Sie!
+            </p>
         </div>
+        <div class="section-image" style="background-image: url('img/04.jpg')"></div>
     </section>
 
-    <!-- Раздел 3: Преимущества -->
-    <section id="advantages">
-        <div class="container">
-            <h2 class="section-title">Ihre Vorteile auf einen Blick</h2>
-            <div class="content-grid">
-                <div class="text-content">
-                    <ul class="benefits-list">
-                        <li><strong>Persönlich & individuell</strong> – kostenlose Beratung, Bewertung und Abwicklung.</li>
-                        <li><strong>Fachwissen & Erfahrung</strong> – marktgerechte Spitzenpreise dank internationalem Kundennetzwerk und jahrelanger Expertise.</li>
-                        <li><strong>Alles aus einer Hand</strong> – Bewertung, Prüfung und Transport sorgen für schnelle, unkomplizierte Abwicklung.</li>
-                        <li><strong>Vertrauen & Diskretion</strong> – seriös, zuverlässig und mit tausenden zufriedenen Kunden.</li>
-                    </ul>
-                    
-                    <p><strong>Kurz gesagt:</strong> Wir machen Weinankauf einfach, fair und stressfrei für Sie!</p>
-                    
-                    <a href="#contact" class="btn" style="margin-top: 2rem;">Jetzt Angebot einholen</a>
-                </div>
-                <div class="image-grid">
-                    <div class="grid-item">
-                        <img src="img/06.jpg" alt="Persönliche Beratung">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/07.jpg" alt="Fachwissen">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/01.jpg" alt="Alles aus einer Hand">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/08.jpg" alt="Vertrauen und Diskretion">
-                    </div>
-                </div>
+    <!-- Контактный раздел -->
+    <section class="section" id="kontakt">
+        <div class="content">
+            <h2>Kontaktieren Sie uns</h2>
+            <p>Haben Sie Fragen oder möchten Sie Ihre Weine verkaufen? Wir sind für Sie da!</p>
+            
+            <div class="contact-info">
+                <h4>Kontaktinformationen</h4>
+                <p><strong>Telefon:</strong> <span class="highlight">+49 1556 33 555 37</span></p>
+                <p><strong>WhatsApp:</strong> <span class="highlight">+49 1556 33 555 37</span></p>
+                <p><strong>E-Mail:</strong> <span class="highlight">info@weinankauf-vonprivat.de</span></p>
             </div>
+            
+            <p style="margin-top: 20px;">Wir freuen uns auf Ihre Nachricht und beraten Sie gerne persönlich!</p>
+            
+            <a href="tel:+4915563355537" class="cta-button" style="margin-top: 20px; text-align: center;">
+                Jetzt anrufen
+            </a>
         </div>
+        <div class="section-image" style="background-image: url('img/05.jpg')"></div>
     </section>
 
-    <!-- Галерея -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Unsere Weinwelt</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="img/02.jpg" alt="Wein 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/04.jpg" alt="Wein 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/06.jpg" alt="Wein 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/08.jpg" alt="Wein 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/10.jpg" alt="Wein 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/05.jpg" alt="Wein 6">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Kontaktieren Sie uns</h2>
-            <div class="content-grid">
-                <div class="text-content">
-                    <h3>So erreichen Sie uns</h3>
-                    <p>Haben Sie Fragen oder möchten Sie ein unverbindliches Angebot? Wir sind für Sie da!</p>
-                    
-                    <div class="contact-info">
-                        <p><i class="fab fa-whatsapp"></i><strong>WhatsApp:</strong> +491556 33 555 37</p>
-                        <p><i class="fas fa-envelope"></i><strong>E-Mail:</strong> info@weinankauf.de</p>
-                        <p><i class="fas fa-clock"></i><strong>Öffnungszeiten:</strong> Mo-Fr: 9:00-18:00 Uhr</p>
-                    </div>
-                    
-                    <h3>So funktioniert's im Überblick:</h3>
-                    <ol>
-                        <li>Weinliste und Fotos senden</li>
-                        <li>Kostenloses Angebot erhalten</li>
-                        <li>Persönliche Besichtigung vereinbaren</li>
-                        <li>Sofortige Bezahlung</li>
-                    </ol>
-                    
-                    <a href="#" class="btn">Jetzt Kontakt aufnehmen</a>
-                </div>
-                <div class="image-grid">
-                    <div class="grid-item">
-                        <img src="img/09.jpg" alt="Kontakt 1">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/10.jpg" alt="Kontakt 2">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/11.jpg" alt="Kontakt 3">
-                    </div>
-                    <div class="grid-item">
-                        <img src="img/12.jpg" alt="Kontakt 4">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Подвал -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>WeinAnkauf</h3>
-                    <p>Ihr Partner für fairen und transparenten Weinankauf. Seit Jahren vertrauen uns tausende zufriedene Kunden.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Kontakt</h3>
-                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +491556 33 555 37</p>
-                    <p><i class="fas fa-envelope"></i> E-Mail: info@weinankauf.de</p>
-                    <p><i class="fas fa-clock"></i> Öffnungszeiten: Mo-Fr 9:00-18:00</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Links</h3>
-                    <p><a href="#how-it-works">So funktioniert's</a></p>
-                    <p><a href="#wines">Interessante Weine</a></p>
-                    <p><a href="#advantages">Ihre Vorteile</a></p>
-                    <p><a href="#gallery">Galerie</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 WeinAnkauf. Alle Rechte vorbehalten.</p>
-            </div>
+            <p>© 2025 Wein Ankauf von Privat | Alle Rechte vorbehalten | 
+               <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+
 </body>
+
 </html>

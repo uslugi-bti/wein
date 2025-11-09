@@ -1,68 +1,60 @@
-// Бургер-меню
-const burgerMenu = document.querySelector('.burger-menu');
-const mobileNav = document.querySelector('.mobile-nav');
-const overlay = document.querySelector('.overlay');
-
-burgerMenu.addEventListener('click', function() {
-    this.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-});
-
-// Закрытие меню при клике на оверлей или ссылку
-overlay.addEventListener('click', closeMenu);
-
-document.querySelectorAll('.mobile-nav a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-
-function closeMenu() {
-    burgerMenu.classList.remove('active');
-    mobileNav.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-// Плавная прокрутка к якорям
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
         const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
+        const headerHeight = document.querySelector('header').offsetHeight;
+        
+        window.scrollTo({
+            top: targetElement.offsetTop - headerHeight,
+            behavior: 'smooth'
+        });
     });
 });
 
-// Анимация появления элементов при скролле
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Scroll animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-// Применяем анимацию к элементам
-document.querySelectorAll('.content-grid, .gallery-grid, .section-title, .benefits-list').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
+// Observe all sections
+document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
 });
 
-// Анимация для элементов героя
-document.querySelectorAll('.hero h1, .hero p, .hero .btn').forEach(el => {
-    el.classList.add('fade-in');
-});
+// Dynamic content padding (optional - can be removed if not needed)
+const content = document.querySelectorAll(".content");
+const container = document.querySelector(".container");
+
+function contentPadding() {
+    const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const containerWidth = document.querySelector(".container").clientWidth + 30;
+
+    const padding = (viewport_width - containerWidth) / 2;
+
+    for (let i = 0; i < content.length; i++) {
+        content[i].style.paddingLeft = padding + "px";
+    }
+}
+
+contentPadding();
+window.addEventListener("resize", contentPadding);
